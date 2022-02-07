@@ -1,9 +1,18 @@
-import CollectionsOverview from '../../components/collections-overview/collections-overview.component';
+import { Routes, Route } from 'react-router-dom';
 
-const ShopPage = () => (
-  <div className='shop-page'>
-    <CollectionsOverview />
-  </div>
-);
+import CollectionsOverview from '../../components/collections-overview/collections-overview.component';
+import CollectionPage from '../collection/collection.component';
+
+const ShopPage = () => {
+  // console.log(match);
+  return (
+    <div className='shop-page'>
+      <Routes>
+        <Route path='' element={<CollectionsOverview />} />
+        <Route path=':collectionId' element={<CollectionPage />} />
+      </Routes>
+    </div>
+  );
+};
 
 export default ShopPage;
