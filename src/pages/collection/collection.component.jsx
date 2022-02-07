@@ -11,18 +11,14 @@ import './collection.styles.scss';
 
 const CollectionPage = ({ collection, changeCurrentCollection }) => {
   const { collectionId } = useParams();
-  // const { title, items } = collection && collection;
 
   useEffect(() => {
     changeCurrentCollection(collectionId);
-    // console.log('useEffect: ', collectionId);
   }, [changeCurrentCollection, collectionId]);
-
-  // console.log(collection);
 
   return (
     <div className='collection-page'>
-      <h2 className='title'>{collection && collection.title}</h2>
+      <h2 className='title'>{collection && collection.title.toUpperCase()}</h2>
       <div className='items'>
         {collection &&
           collection.items.map(item => (
