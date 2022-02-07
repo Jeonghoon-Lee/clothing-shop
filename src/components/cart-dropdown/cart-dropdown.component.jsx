@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { createStructuredSelector } from 'reselect';
-import { selectCartItems } from '../../redux/cart/cart.selector';
+import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
 
 import CartItem from '../cart-item/cart-item.component';
